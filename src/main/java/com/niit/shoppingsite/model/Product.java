@@ -18,52 +18,80 @@ public class Product {
 	private String name;
 	private String description;
 	private double price;
-	private int categoryid;
-	private int supplierid;
+	/*private int cid;
+	private int sid;
 	
 	
 	@Transient
-	private MultipartFile image;
+	private MultipartFile image;*/
+
+
 	public int getId() {
 		return id;
 	}
+
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
+
 	public String getName() {
 		return name;
 	}
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
+
 	public String getDescription() {
 		return description;
 	}
+
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+
 	public double getPrice() {
 		return price;
 	}
+
+
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public int getCategoryid() {
-		return categoryid;
+
+
+	/*public int getCid() {
+		return cid;
 	}
-	public void setCategoryid(int categoryid) {
-		this.categoryid = categoryid;
+
+
+	public void setCid(int cid) {
+		this.cid = cid;
 	}
-	public int getSupplierid() {
-		return supplierid;
+
+
+	public int getSid() {
+		return sid;
 	}
-	public void setSupplierid(int supplierid) {
-		this.supplierid = supplierid;
+
+
+	public void setSid(int sid) {
+		this.sid = sid;
 	}
+
+
 	public MultipartFile getImage() {
 		return image;
 	}
+
+
 	public void setImage(MultipartFile image) {
 		this.image = image;
-	}
+	}*/
 }
