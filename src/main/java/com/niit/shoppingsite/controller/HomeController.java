@@ -43,13 +43,13 @@ else
 //SPA
 }
 
-@RequestMapping("/login")
+/*@RequestMapping("/login")
 public  ModelAndView login(Model model)
 {
 	ModelAndView mv=new ModelAndView("index");
 	model.addAttribute("UserClickedLogin","true");
 	return mv;
-}
+}*/
 @RequestMapping("/logout")
 public  ModelAndView logout(Model model)
 {
@@ -62,7 +62,7 @@ public  ModelAndView logout(Model model)
 public  ModelAndView home(Model model)
 {
 	ModelAndView mo=new ModelAndView("index");
-	model.addAttribute("UserClickedHome","true");
+	model.addAttribute("UserClickedhome","true");
 	return mo;
 }
 

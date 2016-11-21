@@ -90,7 +90,7 @@
         <ul class="dropdown-menu">
         <li><a href="registerHere">SignUp</a></li>
         
-        <li><a href="login">Login</a></li>
+        <li><a href="Login">Login</a></li>
         <li><a href="logout">Logout</a></li>
       </ul>
       </li>

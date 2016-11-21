@@ -21,9 +21,9 @@ ${registerMessage}
 <jsp:include page="login.jsp"></jsp:include>
 <!-- if the user clicked login link, I have to open login.jsp -->
 </c:if>
-  <c:if test="${UserClickedLogin}">
+  <%-- <c:if test="${UserClickedLogin}">
 <jsp:include page="login.jsp"></jsp:include>
-</c:if> 
+</c:if>  --%>
  <c:if test="${UserClickedRegister}">
 <jsp:include page="register.jsp"></jsp:include></c:if> 
  <c:if test="${errorMessage}">

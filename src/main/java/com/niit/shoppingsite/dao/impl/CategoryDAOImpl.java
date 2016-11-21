@@ -6,6 +6,8 @@ import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,7 +17,7 @@ import com.niit.shoppingsite.model.Category;
 public class CategoryDAOImpl implements CategoryDAO {
 	@Autowired
 	SessionFactory sessionFactory;
-	
+	public static final Logger log = LoggerFactory.getLogger(CategoryDAOImpl.class);
     public CategoryDAOImpl(SessionFactory  sessionFactory) {
     this.sessionFactory=sessionFactory;
 }
@@ -23,7 +25,9 @@ public class CategoryDAOImpl implements CategoryDAO {
 	@Transactional
 	public boolean save(Category category) {
 		try {
+			log.info("category start:");
 			sessionFactory.getCurrentSession().saveOrUpdate(category);
+			log.info("category saved:");
 			return true;
 			
 		} catch (HibernateException e) {

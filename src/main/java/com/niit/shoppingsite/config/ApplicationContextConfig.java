@@ -53,7 +53,7 @@ public class ApplicationContextConfig {
 			sessionBuilder.addAnnotatedClasses(Product.class);
 			sessionBuilder.addAnnotatedClasses(Supplier.class);
 			sessionBuilder.addAnnotatedClasses(Category.class);
-			
+			sessionBuilder.addAnnotatedClasses(Login.class);
 			
 			System.out.println("Session");
 			
@@ -90,5 +90,10 @@ public class ApplicationContextConfig {
 			return  new CategoryDAOImpl(sessionFactory);
 		}
 				
-		
+		@Autowired
+		@Bean(name = "loginDAO")
+		public LoginDAO getLoginDAO(SessionFactory sessionFactory){
+			return  new LoginDAOImpl(sessionFactory);
+		}
+				
 		}

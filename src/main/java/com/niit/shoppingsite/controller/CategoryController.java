@@ -51,4 +51,3 @@ public class CategoryController {
 		return "redirect:/Category";
 	}
 }
-
