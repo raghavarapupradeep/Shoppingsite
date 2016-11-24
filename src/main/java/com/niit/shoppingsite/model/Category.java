@@ -13,26 +13,25 @@ import org.springframework.stereotype.Component;
 public class Category {
 	@Id
 	@GeneratedValue
-	private int cid;
-	private String cname;
-	private String cdescription;
-	public int getCid() {
-		return cid;
+	private int id;
+	private String name;
+	private String description;
+	public int getId() {
+		return id;
 	}
-	public void setCid(int cid) {
-		this.cid = cid;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String getCname() {
-		return cname;
+	public String getName() {
+		return name;
 	}
-	public void setCname(String cname) {
-		this.cname = cname;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getCdescription() {
-		return cdescription;
+	public String getDescription() {
+		return description;
 	}
-	public void setCdescription(String cdescription) {
-		this.cdescription = cdescription;
+	public void setDescription(String description) {
+		this.description = description;
 	}
-	
 }

@@ -1,32 +1,33 @@
 package com.niit.shoppingsite.model;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
-
 @Table
 @Entity
 @Component
 public class Supplier {
-	
+
 	@Id
 	@GeneratedValue
-	private int sid;
-	private String sname;
+	private int id;
+	private String name;
 	private String address;
-	public int getSid() {
-		return sid;
+	private String product;
+	public int getId() {
+		return id;
 	}
-	public void setSid(int sid) {
-		this.sid = sid;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String getSname() {
-		return sname;
+	public String getName() {
+		return name;
 	}
-	public void setSname(String sname) {
-		this.sname = sname;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getAddress() {
 		return address;
@@ -34,8 +35,10 @@ public class Supplier {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
+	public String getProduct() {
+		return product;
+	}
+	public void setProduct(String product) {
+		this.product = product;
+	}
 }
-	
-	
-

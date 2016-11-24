@@ -40,17 +40,17 @@ public class CategoryDAOImpl implements CategoryDAO {
 
 	
 	@Transactional
-	public boolean delete(int cid) {
+	public boolean delete(int id) {
 		Category CategoryToDelete = new Category();
-		CategoryToDelete.setCid(cid);
+		CategoryToDelete.setId(id);
 		 sessionFactory.getCurrentSession().delete(CategoryToDelete);
 		 return true;
 	}
 	
 		
 		@Transactional
-		public Category get(int cid) {
-			String hql = "from"+" Category"+" where cid=" + cid;
+		public Category get(int id) {
+			String hql = "from"+" Category"+" where id=" + id;
 		
 			@SuppressWarnings("rawtypes")
 			Query query = sessionFactory.getCurrentSession().createQuery(hql);

@@ -11,14 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-
 import com.niit.shoppingsite.dao.SupplierDAO;
 import com.niit.shoppingsite.model.Supplier;
-
-
 @Controller
 public class SupplierController {
-
 	@Autowired
 	private SupplierDAO supplierDAO;
 
@@ -28,7 +24,7 @@ public class SupplierController {
 	{
 		ModelAndView mv=new ModelAndView("/index");
 	mv.addObject("supplierList",supplierDAO.list());
-	mv.addObject("UserClickedSuppliers","true");
+	mv.addObject("UserClickedSupplier","true");
 		return mv;
 	}
 	
@@ -40,18 +36,20 @@ public class SupplierController {
 		return "redirect:/Supplier";
 		
 	}
-	@RequestMapping(value="/editBySId/{sid}",method = RequestMethod.GET)
-	public String editItem(@PathVariable("sid") int sid, RedirectAttributes attributes) {
+	@RequestMapping(value="/EditByid/{id}",method = RequestMethod.GET)
+	public String editItem(@PathVariable("id") int id, RedirectAttributes attributes) {
 		System.out.println("editSupplier");
-		attributes.addFlashAttribute("supplier", this.supplierDAO.get(sid));
+		attributes.addFlashAttribute("supplier", this.supplierDAO.get(id));
 		
 		return "redirect:/Supplier";
 	}	
-	@RequestMapping(value="/deleteBySId/{sid}",method = RequestMethod.GET)
-	public String deleteItem(@PathVariable("sid") int sid)
+	@RequestMapping(value="/DeleteByid/{id}",method = RequestMethod.GET)
+	public String deleteItem(@PathVariable("id") int id)
 	{
-		supplierDAO.delete(sid);
+		supplierDAO.delete(id);
 		return "redirect:/Supplier";
 	}
 }
+
+
 

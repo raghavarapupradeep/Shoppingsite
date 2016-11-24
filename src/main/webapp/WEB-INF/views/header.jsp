@@ -75,7 +75,7 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="Product">Products</a></li>
+          <li><a href="Product">Product</a></li>
           <li><a href="Supplier">Supplier</a></li>
           <li><a href="Category">Category</a></li> 
          </ul>
@@ -99,21 +99,22 @@
   </div>
 </nav>
 
-<c:choose>
-<c:when test="${UserClickedSuppliers}">
-<c:import url="/WEB-INF/views/supplier.jsp"></c:import>
-</c:when>
-</c:choose>
-<c:choose>
-<c:when test="${UserClickedProducts}">
-<c:import url="/WEB-INF/views/products.jsp"></c:import>
-</c:when>
-</c:choose>
+
 <c:choose>
 <c:when test="${UserClickedCategory}">
-<c:import url="/WEB-INF/views/category.jsp"></c:import>
+<c:import url="/WEB-INF/views/Category.jsp"></c:import>
 </c:when>
-</c:choose>
+</c:choose> 
+ <c:choose>
+<c:when test="${UserClickedSupplier}">
+<c:import url="/WEB-INF/views/Supplier.jsp"></c:import>
+</c:when>
+</c:choose> 
+<c:choose>
+<c:when test="${UserClickedProduct}">
+<c:import url="/WEB-INF/views/Product.jsp"></c:import>
+</c:when>
+</c:choose> 
  <c:choose>
 <c:when test="${UserClickedRegister}">
 <c:import url="/WEB-INF/views/register.jsp"></c:import>
@@ -146,15 +147,15 @@
   <div class="row">
     <div class="col-sm-4">
       <!-- <p>Mr.online  Mr.online  Mr.online  Mr.online  Mr.online  Mr.online  Mr.online Mr.online  line  Mr.online.</p> -->
-      <img src="G:\Shoppingsite\images\tq.jpg.png" class="img-responsive margin" style="width:100%" alt="Image">
+      <img src="G:\Shoppingsite\src\main\webapp\images\tq.jpg.png" class="img-responsive margin" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-4">
      <!--  <p>Mr.online  Mr.online  Mr.online  Mr.online  Mr.online  Mr.online  Mr.online Mr.online  line  Mr.online.</p> -->
-      <img src="G:\Shoppingsite\images\tq.jpg.png" class="img-responsive margin" style="width:100%" alt="Image">
+      <img src="G:\Shoppingsite\src\main\webapp\images\tq.jpg.png" class="img-responsive margin" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-4">
       <!-- <p>Mr.online  Mr.online  Mr.online  Mr.online  Mr.online  Mr.online  Mr.online Mr.online  line  Mr.online.</p> -->
-      <img src="G:\Shoppingsite\images\tq.jpg.png" class="img-responsive margin" style="width:100%" alt="Image">
+      <img src="G:\Shoppingsite\src\main\webapp\images\tq.jpg.png" class="img-responsive margin" style="width:100%" alt="Image">
     </div>
   </div>
 
@@ -169,22 +170,7 @@
 
 
   
-<%-- <c:choose>
-<c:when test="${UserClickedSuppliers}">
-<c:import url="/WEB-INF/views/supplier.jsp"></c:import>
-</c:when>
-</c:choose>
-<c:choose>
-<c:when test="${UserClickedProducts}">
-<c:import url="/WEB-INF/views/products.jsp"></c:import>
-</c:when>
-</c:choose>
-<c:choose>
-<c:when test="${UserClickedCategory}">
-<c:import url="/WEB-INF/views/category.jsp"></c:import>
-</c:when>
-</c:choose>
- --%>
+
 </body>
 </html>
 <!-- <!-- First Container
@@ -193,4 +179,3 @@
   <img src="G:\Shoppingsite\images\dddd.png" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="150" height="150">
   <h3>Shoping Website</h3>
 </div> --> 
-

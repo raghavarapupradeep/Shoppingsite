@@ -1,10 +1,10 @@
-
 package com.niit.shoppingsite.dao.impl;
 
 import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,9 @@ import org.springframework.transaction.annotation.Transactional;
 import com.niit.shoppingsite.dao.SupplierDAO;
 import com.niit.shoppingsite.model.Supplier;
 
+
 public class SupplierDAOImpl implements SupplierDAO{
+	
 	@Autowired
 	SessionFactory sessionFactory;
 	
@@ -33,15 +35,15 @@ public class SupplierDAOImpl implements SupplierDAO{
 		
 	}
 @Transactional
-	public boolean delete(int sid) {
+	public boolean delete(int id) {
 		Supplier SupplierToDelete = new Supplier();
-		SupplierToDelete.setSid(sid);
+		SupplierToDelete.setId(id);
 		 sessionFactory.getCurrentSession().delete(SupplierToDelete);
 		 return true;
 	}
 @Transactional
-	public Supplier get(int sid) {
-		String hql = "from"+" Supplier"+" where sid=" + sid;
+	public Supplier get(int id) {
+		String hql = "from"+" Supplier"+" where id=" + id;
 		
 		@SuppressWarnings("rawtypes")
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
@@ -67,3 +69,5 @@ public class SupplierDAOImpl implements SupplierDAO{
 		return listSupplier;
 	}
 }
+
+

@@ -6,92 +6,62 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
-
 @Table
 @Entity
+@Component
 public class Product {
-	
-	@Id
-	@GeneratedValue
+@Id
+@GeneratedValue
 	private int id;
 	private String name;
 	private String description;
-	private double price;
-	/*private int cid;
-	private int sid;
-	
-	
+	private int price;
+	private int categoryid;
+	private int supplierid;
 	@Transient
-	private MultipartFile image;*/
-
-
+private MultipartFile image;
 	public int getId() {
 		return id;
 	}
-
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
-
 	public String getName() {
 		return name;
 	}
-
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
-
 	public String getDescription() {
 		return description;
 	}
-
-
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-
-	public double getPrice() {
+	public int getPrice() {
 		return price;
 	}
-
-
-	public void setPrice(double price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
-
-
-	/*public int getCid() {
-		return cid;
+	public int getCategoryid() {
+		return categoryid;
 	}
-
-
-	public void setCid(int cid) {
-		this.cid = cid;
+	public void setCategoryid(int categoryid) {
+		this.categoryid = categoryid;
 	}
-
-
-	public int getSid() {
-		return sid;
+	public int getSupplierid() {
+		return supplierid;
 	}
-
-
-	public void setSid(int sid) {
-		this.sid = sid;
+	public void setSupplierid(int supplierid) {
+		this.supplierid = supplierid;
 	}
-
-
 	public MultipartFile getImage() {
 		return image;
 	}
-
-
 	public void setImage(MultipartFile image) {
 		this.image = image;
-	}*/
+	}
 }

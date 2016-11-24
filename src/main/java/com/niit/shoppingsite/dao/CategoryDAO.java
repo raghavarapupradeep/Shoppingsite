@@ -6,8 +6,7 @@ import com.niit.shoppingsite.model.Category;
 
 public interface CategoryDAO {
 	public boolean save(Category category);
-	public boolean delete(int cid);
-	public Category get(int cid);
+	public boolean delete(int id);
+	public Category get(int id);
 	public List<Category> list();
-
 }

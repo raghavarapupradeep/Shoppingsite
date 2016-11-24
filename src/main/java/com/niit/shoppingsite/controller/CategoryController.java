@@ -37,17 +37,17 @@ public class CategoryController {
 		return "redirect:/Category";
 		
 	}
-	@RequestMapping(value="/editBycid/{cid}",method = RequestMethod.GET)
-	public String editItem(@PathVariable("cid") int cid, RedirectAttributes attributes) {
+	@RequestMapping(value="/editByid/{id}",method = RequestMethod.GET)
+	public String editItem(@PathVariable("id") int id, RedirectAttributes attributes) {
 		System.out.println("editCategory");
-		attributes.addFlashAttribute("category", this.categoryDAO.get(cid));
+		attributes.addFlashAttribute("category", this.categoryDAO.get(id));
 		
 		return "redirect:/Category";
 	}	
-	@RequestMapping(value="/deleteBycid/{cid}",method = RequestMethod.GET)
-	public String deleteItem(@PathVariable("cid") int cid)
+	@RequestMapping(value="/deleteByid/{id}",method = RequestMethod.GET)
+	public String deleteItem(@PathVariable("id") int id)
 	{
-		categoryDAO.delete(cid);
+		categoryDAO.delete(id);
 		return "redirect:/Category";
 	}
 }

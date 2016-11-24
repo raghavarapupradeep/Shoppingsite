@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" 
      pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+     <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
@@ -19,31 +19,31 @@ body  {
 
 <form:form action="${addAction}" modelAttribute="category" id="btn-add">
    <h3>
-                    <c:if test="$(category.cid==0}">
+                    <c:if test="$(category.id==0}">
 		       Add New Item
 	            </c:if>
-	            <c:if test="${!empty category.cid}">
+	            <c:if test="${!empty category.id}">
 	            
-		      Update Item for CID <c:out value="${category.cid}"/> 
-		     <%--  <form:hidden path="cid"/> --%>
+		      Update Item for Category List ID <c:out value="${category.id}"/> 
+		     <%--  <form:hidden path="id"/> --%>
 	            </c:if>
 	    
     </h3>     
 	  <table>
 	  
-	  <tr>  <c:if test="${category.cid!=0}">
-	  <td>C Id:</td> <td><form:input  path="cid"/></td> 
+	  <tr>  <c:if test="${category.id!=0}">
+	  <td> Id:</td> <td><form:input  path="id"/></td> 
 	   </c:if>
-	    <tr> <td>  Name:</td> <td><form:input  path="cname"/></td> 
-	    <tr> <td> Description:</td> <td><form:input path="cdescription"/> </td> 
+	    <tr> <td>  Name:</td> <td><form:input  path="name"/></td> 
+	    <tr> <td> Description:</td> <td><form:input path="description"/> </td> 
 	     
 		
   
 	    <tr> <td colspan="2">
-    	        <c:if test="${category.cid==0}">
+    	        <c:if test="${category.id==0}">
 			      <input type="submit" value="Add" id="btn-add"> 
 	         </c:if>
-	         <c:if test="${category.cid!=0}">
+	         <c:if test="${category.id!=0}">
 			      <input type="submit" value="Update" id="btn-update"> 
 	         </c:if>
 		</td> 
@@ -54,22 +54,22 @@ body  {
 	  <table class="table table-bordered">
     <thead>
       <tr>
-        <th>CID</th>
-        <th>CName</th>
-        <th>CDESCRIPTION</th>
+        <th>Category ID</th>
+        <th>Category  Name</th>
+        <th>Category  DESCRIPTION</th>
           <th>Action</th>
         
       </tr>
     </thead>
     	      <c:forEach var="obj" items="${categoryList}">
 		      <tr>
-		                 <td> <c:out value="${obj.cid}"/> </td>
-		                 <td> <c:out value="${obj.cname}"/> </td>
-				 <td> <c:out value="${obj.cdescription}"/> </td>
+		                 <td> <c:out value="${obj.id}"/> </td>
+		                 <td> <c:out value="${obj.name}"/> </td>
+				 <td> <c:out value="${obj.description}"/> </td>
 				
 				
-				 <td> <a href="deleteBycid/${obj.cid}">Delete </a> |
-				     <a href="editBycid/${obj.cid}">Edit</a> 
+				 <td> <a href="deleteByid/${obj.id}">Delete </a> |
+				     <a href="editByid/${obj.id}">Edit</a> 
 				 </td>
 		      </tr>
 	      </c:forEach>
@@ -79,3 +79,7 @@ body  {
   </center>
 </body>
 </html>
+ 
+
+
+

@@ -18,28 +18,29 @@ body  {
 
 <form:form action="${addAction}" modelAttribute="supplier" id="btn-add">
    <h3>
-                    <c:if test="$(supplier.sid==0}">
+                    <c:if test="$(supplier.id==0}">
 		       Add New Item
 	            </c:if>
-	            <c:if test="${!empty supplier.sid}">
-		      Update Item for SID: <c:out value="${supplier.sid}"/>
+	            <c:if test="${!empty supplier.id}">
+		      Update Item for Supplier ID: <c:out value="${supplier.id}"/>
 		     <%--  <form:hidden path="sid"/> --%>
 	            </c:if>
          </h3>
 	  <table>
 	  
-	  <tr>  <c:if test="${supplier.sid!=0}">
-	  <td> SId:</td> <td><form:input  path="sid"/></td> 
+	  <tr>  <c:if test="${supplier.id!=0}">
+	  <td> Id:</td> <td><form:input  path="id"/></td> 
 	   </c:if>
-	    <tr> <td> SName:</td> <td><form:input  path="sname"/></td> 
+	    <tr> <td> Name:</td> <td><form:input  path="name"/></td> 
 	    <tr> <td>Address:</td> <td><form:input path="address"/> </td> 
+	    <tr> <td>Product:</td> <td><form:input path="product"/> </td> 
 	    
   
 	    <tr> <td colspan="2">
-    	        <c:if test="${supplier.sid==0}">
+    	        <c:if test="${supplier.id==0}">
 			      <input type="submit" value="Add" id="btn-add"> 
 	         </c:if>
-	         <c:if test="${supplier.sid!=0}">
+	         <c:if test="${supplier.id!=0}">
 			      <input type="submit" value="Update" id="btn-update"> 
 	         </c:if>
 		</td> 
@@ -50,9 +51,10 @@ body  {
 	   <table class="table table-bordered">
     <thead>
       <tr>
-        <th>SID</th>
-        <th>SName</th>
-        <th>Address</th>
+        <th>Supplier ID</th>
+        <th>Supplier Name</th>
+        <th>Supplier Address</th>
+         <th>Supplier Product</th>
           <th>Action</th>
         
       </tr>
@@ -67,13 +69,14 @@ body  {
 	      	</tr> -->
     	      <c:forEach var="obj" items="${supplierList}">
 		      <tr>
-		                 <td> <c:out value="${obj.sid}"/> </td>
-		                 <td> <c:out value="${obj.sname}"/> </td>
+		                 <td> <c:out value="${obj.id}"/> </td>
+		                 <td> <c:out value="${obj.name}"/> </td>
 				 <td> <c:out value="${obj.address}"/> </td>
+				  <td> <c:out value="${obj.product}"/> </td>
 				
 				
-				 <td> <a href="deleteBySId/${obj.sid}">Delete </a> |
-				     <a href="editBySId/${obj.sid}">Edit</a> 
+				 <td> <a href="DeleteByid/${obj.id}">Delete </a> |
+				     <a href="EditByid/${obj.id}">Edit</a> 
 				 </td>
 		      </tr>
 	      </c:forEach>

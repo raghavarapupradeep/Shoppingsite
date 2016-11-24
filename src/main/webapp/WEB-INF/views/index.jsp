@@ -1,7 +1,9 @@
-<%@ page language ="java" contentType="text/html;  charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-	
+      <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
+
 <html>
 <head>
 <meta http-equiv="context-Type" content ="text/html; charset=ISO-8859-1">
@@ -30,11 +32,11 @@ ${registerMessage}
 <jsp:include page="logout.jsp"></jsp:include></c:if> 
  <c:if test="${UserClickedLogout}"> 
 <jsp:include page="logout.jsp"></jsp:include></c:if> 
-<%-- <c:if test="${UserClickedCategories}">
-<jsp:include page="category.jsp"></jsp:include></c:if> --%>
-<%-- <c:if test="${UserClickedsupplier}">
-<jsp:include page="supplier.jsp"></jsp:include></c:if>
-<c:if test="${UserClickedProducts}">
-<jsp:include page="products.jsp"></jsp:include></c:if> --%>
-</body>
+<c:if test="${UserClickedCategory}">
+<jsp:include page="Category.jsp"></jsp:include></c:if> 
+ <c:if test="${UserClickedSupplier}">
+<jsp:include page="Supplier.jsp"></jsp:include></c:if>
+<c:if test="${UserClickedProduct}">
+<jsp:include page="Product.jsp"></jsp:include></c:if>  
+ </body>
 </html>

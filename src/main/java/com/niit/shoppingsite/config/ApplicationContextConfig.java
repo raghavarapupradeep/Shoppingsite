@@ -13,11 +13,21 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.niit.shoppingsite.dao.*;
-import com.niit.shoppingsite.dao.impl.*;
-import com.niit.shoppingsite.model.*;
+import com.niit.shoppingsite.dao.CategoryDAO;
+import com.niit.shoppingsite.dao.ProductDAO;
+import com.niit.shoppingsite.dao.SupplierDAO;
+import com.niit.shoppingsite.dao.impl.CategoryDAOImpl;
+import com.niit.shoppingsite.dao.impl.ProductDAOImpl;
+import com.niit.shoppingsite.dao.impl.SupplierDAOImpl;
+import com.niit.shoppingsite.model.Category;
+import com.niit.shoppingsite.model.Product;
+import com.niit.shoppingsite.model.Supplier;
+
+
+
+
 @Configuration
-@ComponentScan("com.niit.shoppingsite")
+@ComponentScan("com.niit.Shoppingsite")
 @EnableTransactionManagement
 public class ApplicationContextConfig {
 
@@ -50,11 +60,11 @@ public class ApplicationContextConfig {
 		public SessionFactory getSessionFactory(DataSource dataSource) {
 			LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
 			sessionBuilder.addProperties(getHibernateProperties());
-			sessionBuilder.addAnnotatedClasses(Product.class);
 			sessionBuilder.addAnnotatedClasses(Supplier.class);
 			sessionBuilder.addAnnotatedClasses(Category.class);
-			sessionBuilder.addAnnotatedClasses(Login.class);
-			
+			sessionBuilder.addAnnotatedClasses(Product.class);
+	
+		
 			System.out.println("Session");
 			
 			return sessionBuilder.buildSessionFactory();
@@ -90,10 +100,4 @@ public class ApplicationContextConfig {
 			return  new CategoryDAOImpl(sessionFactory);
 		}
 				
-		@Autowired
-		@Bean(name = "loginDAO")
-		public LoginDAO getLoginDAO(SessionFactory sessionFactory){
-			return  new LoginDAOImpl(sessionFactory);
-		}
-				
-		}
+				}
