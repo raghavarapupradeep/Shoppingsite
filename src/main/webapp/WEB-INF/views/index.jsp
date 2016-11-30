@@ -137,6 +137,16 @@ ${registerMessage}
 <c:if test="${UserClickedRegistration}">
 <jsp:include page="Registration.jsp"></jsp:include></c:if>  
 
+<style> 
+#example1 {
+    background-image: url(G:\Shoppingsite\src\main\webapp\images\de.jpg), url(G:\Shoppingsite\src\main\webapp\images\ddd.jpg);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+    padding: 15px;
+}
+</style>
+</head>
+<body>
 
 
 </body>
