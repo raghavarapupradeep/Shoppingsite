@@ -18,7 +18,7 @@ public class HomeController {
 		return "index";
 	}
 
-	@RequestMapping("/register")
+/*	@RequestMapping("/register")
 	public String register(Model m)
 	{
 		m.addAttribute("registerMessage","your successfully logged in");
@@ -30,7 +30,7 @@ public String validate(@RequestParam(name="userID") String id, @RequestParam(nam
 {
 if (id.equals("niit") && pwd.equals("niit"))
 	{
-		/*model.addAttribute("SucessMessage","You sucessfully logged in");*/
+		model.addAttribute("SucessMessage","You sucessfully logged in");
 		session.setAttribute("SucessMessage","You sucessfully logged in");
 		return "success";
 	}
@@ -41,7 +41,7 @@ else
 }
 
 //SPA
-}
+*/
 
 /*@RequestMapping("/login")
 public  ModelAndView login(Model model)

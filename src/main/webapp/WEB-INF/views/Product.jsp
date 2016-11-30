@@ -86,12 +86,15 @@ body  {
 								<form:option class="input1"  value="${supplier.id}">${supplier.name}</form:option>
 							</c:forEach>
 								</form:select></td></tr>
-				<tr>
+								
+					
+				
+				 <tr>
 					<td>Image:</td>
 					<td><form:input type="file"
 							class=" btn btn-default btn-block form-control" path="image"
 							required="true" /></td>
-				</tr> 
+				</tr>  
 				<tr>
 					<td></td>
 					<td><input type="submit" class="btn btn-primary" value="Save" /></td>
@@ -126,9 +129,8 @@ body  {
 						<td id="td1"><c:out value="${product.categoryid}" />
 						<td id="td1"><c:out value="${product.supplierid}" />
 						<td><div class="thumbnail">
-								<img height="100px" width="100px" alt="${product.id }"
-									src="<c:url value="/images/${product.id }.jpg"></c:url>">
-							</div>
+			<img height="100px" width="100px" alt="${product.id }"src="<c:url value="/images/${product.id}.jpg"></c:url>">
+							</div> 
 						<td id="td1"><a href="addupdateproduct/${product.id }"class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-edit"></span> Edit
 								</a>
