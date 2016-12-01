@@ -1,11 +1,8 @@
 package com.niit.shoppingsite.controller;
 
-import javax.servlet.http.HttpSession;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -74,6 +71,6 @@ public ModelAndView registerHere()
 	mr.addObject("UserClickedRegister","true");
 	return mr;
 }
-
+/*tanuja*/
 
 }

@@ -64,4 +64,5 @@ private MultipartFile image;
 	public void setImage(MultipartFile image) {
 		this.image = image;
 	}
+	/*tanuja*/
 }

@@ -12,4 +12,5 @@ public interface SupplierDAO {
 	public Supplier get(int id);
 
 	public List<Supplier> list();
+	/*tanuja*/
 }

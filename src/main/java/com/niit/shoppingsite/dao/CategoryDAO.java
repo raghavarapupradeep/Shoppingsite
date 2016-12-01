@@ -9,4 +9,5 @@ public interface CategoryDAO {
 	public boolean delete(int id);
 	public Category get(int id);
 	public List<Category> list();
+	/*tanuja*/
 }

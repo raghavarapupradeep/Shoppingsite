@@ -75,4 +75,5 @@ public String ProductPagedelete(@ModelAttribute("product") Product product,Model
 	productDAO.delete(product);
 	return "redirect:/Product";
 }
+/*tanuja*/
 }

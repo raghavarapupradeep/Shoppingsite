@@ -15,5 +15,5 @@ public interface ProductDAO {
 	public  List<Product> list();
 	public List<Product> getproduct(int id);
 		
-
+	/*tanuja*/
 }
