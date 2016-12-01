@@ -39,8 +39,8 @@
       color: #fff;
   }
   .container-fluid {
-      padding-top: 70px;
-      padding-bottom: 70px;
+      padding-top: 30px;
+      padding-bottom: 30px;
   }
   .navbar {
       padding-top: 15px;
@@ -62,7 +62,7 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-default">
+<!-- <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -96,11 +96,26 @@
          <li><a href="Registration">SignUp</a></li> 
         
         <li><a href="Login">Login</a></li>
-        <!-- <li><a href="logout">Logout</a></li> -->
+        <li><a href="logout">Logout</a></li>
       </ul>
       </li>
       </ul>
     </div>
+  </div>
+</nav> -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Mr.Online</a>
+    </div>
+    <ul class="nav navbar-nav">
+     <li class="active"><a href="Admin">Admin</a></li></ul>
+       
+  
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="Registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
   </div>
 </nav>
 <%-- <jsp:include page="Home.jsp"></jsp:include> --%>
@@ -135,7 +150,10 @@ ${registerMessage}
 <c:if test="${UserClickedLogin}">
 <jsp:include page="Login.jsp"></jsp:include></c:if>  
 <c:if test="${UserClickedRegistration}">
-<jsp:include page="Registration.jsp"></jsp:include></c:if>  
+<jsp:include page="Registration.jsp"></jsp:include></c:if> 
+<c:if test="${UserClickedadmin}">
+<jsp:include page="Admin.jsp"></jsp:include></c:if>  
+
 
 <style> 
 #example1 {
