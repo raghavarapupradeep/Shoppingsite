@@ -109,7 +109,7 @@
       <a class="navbar-brand" href="#">Mr.Online</a>
     </div>
     <ul class="nav navbar-nav">
-     <li class="active"><a href="Admin">Admin</a></li></ul>
+     <!-- <li class="active"><a href="Admin">Admin</a></li></ul> -->
        
   
     <ul class="nav navbar-nav navbar-right">
