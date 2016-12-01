@@ -39,8 +39,8 @@
       color: #fff;
   }
   .container-fluid {
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding-top: 3px;
+      padding-bottom: 3px;
   }
   .navbar {
       padding-top: 15px;
