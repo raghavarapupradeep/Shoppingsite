@@ -13,14 +13,17 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.niit.shoppingsite.dao.CartDAO;
 import com.niit.shoppingsite.dao.CategoryDAO;
 import com.niit.shoppingsite.dao.ProductDAO;
 import com.niit.shoppingsite.dao.SupplierDAO;
 import com.niit.shoppingsite.dao.UserDAO;
+import com.niit.shoppingsite.dao.impl.CartDAOImpl;
 import com.niit.shoppingsite.dao.impl.CategoryDAOImpl;
 import com.niit.shoppingsite.dao.impl.ProductDAOImpl;
 import com.niit.shoppingsite.dao.impl.SupplierDAOImpl;
 import com.niit.shoppingsite.dao.impl.UserDAOImpl;
+import com.niit.shoppingsite.model.Cart;
 import com.niit.shoppingsite.model.Category;
 import com.niit.shoppingsite.model.Product;
 import com.niit.shoppingsite.model.Supplier;
@@ -68,6 +71,7 @@ public class ApplicationContextConfig {
 			sessionBuilder.addAnnotatedClasses(Product.class);
 			sessionBuilder.addAnnotatedClasses(Product.class);
 			sessionBuilder.addAnnotatedClasses(User.class);
+			sessionBuilder.addAnnotatedClasses(Cart.class);
 			
 	
 		
@@ -110,5 +114,9 @@ public class ApplicationContextConfig {
 		public UserDAO getUserDao(SessionFactory sessionFactory){
 			return  new UserDAOImpl(sessionFactory);
 		}
-				
+		@Autowired
+		@Bean(name = "cartDAO")
+		public CartDAO getCartDao(SessionFactory sessionFactory){
+			return  new CartDAOImpl(sessionFactory);
+		}
 				}

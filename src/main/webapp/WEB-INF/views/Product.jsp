@@ -14,14 +14,11 @@
     border-collapse: collapse;
     width: 100%;
 } */
-
 th, td {
     text-align: center;
     padding: 8px;
 }
-
 /* tr:nth-child(even){background-color: #f2f2f2}
-
 th {
     background-color: #ffe6e6;
     color: white;
@@ -129,7 +126,7 @@ body  {
 						<td id="td1"><c:out value="${product.categoryid}" />
 						<td id="td1"><c:out value="${product.supplierid}" />
 						<td><div class="thumbnail">
-			<img height="100px" width="100px" alt="${product.id }"src="<c:url value="/images/${product.id}.jpg"></c:url>">
+			<img height="100px" width="100px" alt="${product.id }"src="<c:url value="/resources/images/${product.id}.jpg"></c:url>">
 							</div> 
 						<td id="td1"><a href="addupdateproduct/${product.id }"class="btn btn-info btn-lg">
           <span class="glyphicon glyphicon-edit"></span> Edit

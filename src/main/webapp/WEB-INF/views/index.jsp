@@ -62,66 +62,24 @@
 <%-- <jsp:include page="Home.jsp"></jsp:include> --%>
 <body>
 
-<!-- Navbar -->
-<!-- <nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Mr.Online</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        
-     
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="Product">Product</a></li>
-          <li><a href="Supplier">Supplier</a></li>
-          <li><a href="Category">Category</a></li> 
-         </ul>
-         </li>
-         </ul>
-         <ul class="nav navbar-nav navbar-Left">
-        
-     
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">User
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-         <li><a href="Registration">SignUp</a></li> 
-        
-        <li><a href="Login">Login</a></li>
-        <li><a href="logout">Logout</a></li>
-      </ul>
-      </li>
-      </ul>
-    </div>
-  </div>
-</nav> -->
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Mr.Online</a>
     </div>
-    <ul class="nav navbar-nav">
-     <!-- <li class="active"><a href="Admin">Admin</a></li></ul> -->
-       
-  
     <ul class="nav navbar-nav navbar-right">
     <sec:authorize access="!isAuthenticated()">
+    
       <li><a href="Registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </sec:authorize>
     </ul>
     <sec:authorize access="isAuthenticated()">
+     <ul class="nav navbar-nav navbar-right">
+      <li><a href="Cart"><span class="glyphicon glyphicon-user"></span>Cart</a></li>
 	<li><a href="<c:url value="/perform_logout" />">Logout</a></li>
-	<li><a href="">Welcome  <sec:authentication property="principal.username"/></a></li>
+	<li><a href="">Welcome  <sec:authentication property="principal.username"/></a></li></ul>
 </sec:authorize>
   </div>
 </nav>
@@ -149,19 +107,19 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="G:\Shoppingsite\src\main\webapp\images\apple-laptop.jpg" alt="apple" width="360" height="345">
+        <img src="G:\Shoppingsite\src\main\webapp\resources\images\apple-laptop.jpg" alt="apple" width="360" height="345">
       </div>
 
       <div class="item">
-        <img src="G:\Shoppingsite\src\main\webapp\images\2013-iphone5s-gold.png" alt="iphone" width="360" height="345">
+        <img src="G:\Shoppingsite\src\main\webapp\resources\images\2013-iphone5s-gold.png" alt="iphone" width="360" height="345">
       </div>
     
       <div class="item">
-        <img src="G:\Shoppingsite\src\main\webapp\images\7f72abfdd84fda86d9bf9890e5c44640.jpg" alt="Flower" width="360" height="345">
+        <img src="G:\Shoppingsite\src\main\webapp\resources\images\7f72abfdd84fda86d9bf9890e5c44640.jpg" alt="Flower" width="360" height="345">
       </div>
 
       <div class="item">
-        <img src="G:\Shoppingsite\src\main\webapp\images\covers.jpg" alt="covers" width="360" height="345">
+        <img src="G:\Shoppingsite\src\main\webapp\resources\images\covers.jpg" alt="covers" width="360" height="345">
       </div>
     </div>
 
@@ -211,7 +169,13 @@ ${registerMessage}
 <c:if test="${UserClickedRegistration}">
 <jsp:include page="Registration.jsp"></jsp:include></c:if> 
 <c:if test="${UserClickedadmin}">
-<jsp:include page="Admin.jsp"></jsp:include></c:if>  
+<jsp:include page="Admin.jsp"></jsp:include></c:if> 
+<c:if test="${UserClickedCart}">
+<jsp:include page="Cart.jsp"></jsp:include></c:if>   
+<c:if test="${UserClickedshowproduct}">
+<jsp:include page="ShowProduct.jsp"></jsp:include></c:if>   
+
+	
 
 
 <c:forEach items="${productList}" var="product">
@@ -219,24 +183,50 @@ ${registerMessage}
 
 
 				<td>
-					<!-- --<div class="thumbnail">-->
-					<div class="col-md-4">
-						<a href="ShowProduct/${product.id}"> <img height="150px"
-							width="150px" alt="${product.id }"
-							src="<c:url value="/resources/images/${product.id }.jpg"></c:url>"></a>
+						<div class="col-md-4">
+<a href="ShowProduct/${product.id}"> <img height="150px"width="150px" alt="${product.id}" src="<c:url value="/resources/images/${product.id}.jpg"></c:url>"></a>
 
-						<td><c:url var="action" value="addtocart/${product.id}"></c:url>
+						
+						<br>
+<td><c:url var="action" value="addtocart/${product.id}"></c:url>
 							<form:form action="${action}" modelAttribute="cart">
 								<td id="td1"><c:out value="${product.name}" /><br>
 								<td id="td1"><c:out value="${product.price}" /> <input
 									type="submit" class="btn btn-primary" value="Add To Cart" /><br>
 							</form:form></td>
-						<br>
-
 					</div>
 			</tr>
 			</td>
 		</c:forEach>
+		</div>
+		<div ng-view></div>
+
+	<script>
+		$(document).ready(function() {
+			$('.dropdown a.test').on("click", function(e) {
+				$(this).next('ul').toggle();
+				e.stopPropagation();
+				e.preventDefault();
+			});
+		});
+	</script>
+
+	<c:choose>
+		<c:when test="${UserClickedAdmin}">
+			<c:import url="/WEB-INF/views/Admin.jsp"></c:import>
+		</c:when>
+	</c:choose>
+
+	<c:choose>
+		<c:when test="${UserClickedshowproduct}">
+			<c:import url="/WEB-INF/views/ShowProduct.jsp"></c:import>
+		</c:when>
+	</c:choose>
+	<c:choose>
+		<c:when test="${UserClickedCart}">
+			<c:import url="/WEB-INF/views/Cart.jsp"></c:import>
+		</c:when>
+	</c:choose>
 
 </body>
 </html>
