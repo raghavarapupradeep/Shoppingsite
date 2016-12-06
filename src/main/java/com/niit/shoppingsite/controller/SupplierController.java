@@ -49,7 +49,7 @@ public class SupplierController {
 		supplierDAO.delete(id);
 		return "redirect:/Supplier";
 	}
-	/*tanuja*/
+
 }
 
 

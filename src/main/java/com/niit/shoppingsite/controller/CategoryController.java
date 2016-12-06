@@ -50,5 +50,5 @@ public class CategoryController {
 		categoryDAO.delete(id);
 		return "redirect:/Category";
 	}
-	/*tanuja*/
+
 }

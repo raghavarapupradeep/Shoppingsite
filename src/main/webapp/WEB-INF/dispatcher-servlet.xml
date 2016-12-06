@@ -28,5 +28,6 @@
         <!-- max upload size in bytes -->
          
         <property name="maxUploadSize" value="20971520" /></bean>
+        <import resource="webflow-config.xml"/>
    </beans>
  
