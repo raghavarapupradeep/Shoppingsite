@@ -471,10 +471,10 @@ p {
      </div>
  
      <div id="templatemo_banner">
-     	<a href="#"><img src="G:\Shoppingsite\src\main\webapp\resources\images\bg1.jpg" alt="gb" title="Online Shopping SIte- Mr.online" border="0" /></a>     </div>
+     	<a href="#"><img src="G:\Shoppingsite\src\main\webapp\resources\images\bg22.jpg" alt="gb" title="Online Shopping SIte- Mr.online" border="0" /></a>     </div>
      
 <div id="templatemo_menu_panel">
-        <ul>
+        <ul >
            <sec:authorize access="!isAuthenticated()">
     
       <li><a href="Registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -512,7 +512,57 @@ ${registerMessage}
 <jsp:include page="ShowProduct.jsp"></jsp:include></c:if> 
 <div>  
 
-          
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 30%;
+      margin: auto;
+  }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="G:\Shoppingsite\src\main\webapp\resources\images\apple-laptop.jpg" alt="apple" width="360" height="345">
+      </div>
+
+      <div class="item">
+        <img src="G:\Shoppingsite\src\main\webapp\resources\images\2013-iphone5s-gold.png" alt="iphone" width="360" height="345">
+      </div>
+    
+      <div class="item">
+        <img src="G:\Shoppingsite\src\main\webapp\resources\images\7f72abfdd84fda86d9bf9890e5c44640.jpg" alt="Flower" width="360" height="345">
+      </div>
+
+      <div class="item">
+        <img src="G:\Shoppingsite\src\main\webapp\resources\images\covers.jpg" alt="covers" width="360" height="345">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>        
 <c:forEach items="${productList}" var="product">
 			<tr>
 
@@ -537,6 +587,8 @@ ${registerMessage}
 			</td>
 		</c:forEach>
 	</div>
+	
+	
  
  <%-- <c:choose>
   <c:when test="${!HideOthers }">

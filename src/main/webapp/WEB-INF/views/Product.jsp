@@ -38,6 +38,23 @@ body  {
     background-color: #ffe6e6  ;
 }
 </style>
+<script>
+	var app = angular.module('myApp', []);
+	function MyController($scope, $http) {
+		$scope.sortType = 'name'; // set the default sort type
+		$scope.sortReverse = false; // set the default sort order
+		$scope.search = '';
+		$scope.getDataFromServer = function() {
+			$http({
+				method : 'GET',
+				url : 'productgson'
+			}).success(function(data, status, headers, config) {
+				$scope.products = data;// alert(data); 
+			}).error(function(data, status, headers, config) {
+			});
+		};
+	};
+</script>
 <body>
 <h3>New Product Details</h3>
 
@@ -99,6 +116,16 @@ body  {
 			</table></div>
 		</form:form>
 	</div>
+	<div class="container" data-ng-app="myApp"
+				data-ng-controller="MyController" data-ng-init="getDataFromServer()"
+				style="overflow: auto; height: 400px; width: 70%">
+				<form>
+					<input
+						class="w3-input w3-animate-input w3-border w3-round w3-small"
+						data-ng-model="search" type="text" placeholder=" Search Product"
+						style="width: 20%">
+
+				</form>
 	<div align="center">
 		<table class="table1 table-bordered" style="width: 100%">
 			
