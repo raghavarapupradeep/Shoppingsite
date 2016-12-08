@@ -138,7 +138,7 @@ img {
     width:100%;
 }
 </style> --%>
- --%>
+ 
  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -147,8 +147,14 @@ img {
 <meta name="keywords" content="free website template, flower shop, website templates, CSS, HTML" />
 <meta name="description" content="Flower Shop - free website template, W3C compliant HTML CSS layout" />
 <link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
+  
+     
 <style>
 
 body {
@@ -304,8 +310,8 @@ p {
 #templatemo_container #templatemo_banner {
 	overflow: hidden;	
 	width: 880px;
-	height: 190px; /* + 60 for padding top and bottom */
-	padding: 30px 30px;
+	height: 60px; /* + 60 for padding top and bottom */
+	padding: 3px 3px;
 	background: #ffffff url(images/templatemo_banner_bg.jpg) top right no-repeat;
 }
 /* end of header panel */
@@ -460,26 +466,37 @@ p {
 /* end of footer */
 </style>
 <body>
-
-
-     	 <div id="templatemo_content">
+<div id="templatemo_header">
     
-    	<div id="templatemo_content_left">
-    	<h1>Welcome to     Mr.Online</h1>
+    
+    	<h1>Welcome to  Mr.Online</h1>
     	
      </div>
-     </div>
- 
-     <div id="templatemo_banner">
-     	<a href="#"><img src="G:\Shoppingsite\src\main\webapp\resources\images\bg22.jpg" alt="gb" title="Online Shopping SIte- Mr.online" border="0" /></a>     </div>
-     
-<div id="templatemo_menu_panel">
-        <ul >
-           <sec:authorize access="!isAuthenticated()">
+
+     	
+      
+        <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
     
+ 
+    <ul class="nav navbar-nav">
+      
+      <li class="active"><a href="#">Home</a></li> </ul>   
+  
+         <ul class="nav navbar-nav navbar-right">
+      <sec:authorize access="!isAuthenticated()">
+      
       <li><a href="Registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li></ul>
       </sec:authorize>
+  </div>
+
+          <%--  <sec:authorize access="!isAuthenticated()">
+    
+      <li><a href="Registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li></ul>
+      </sec:authorize> --%>
       <sec:authorize access="isAuthenticated()">
      <ul class="nav navbar-nav navbar-right">
       <li><a href="Cart"><span class="glyphicon glyphicon-user"></span>Cart</a></li>
@@ -487,7 +504,12 @@ p {
 	<li><a href="">Welcome  <sec:authentication property="principal.username"/></a></li></ul>
 </sec:authorize>
             
-    </div> <!-- end of menu -->
+    </div></nav>
+ 
+     <div id="templatemo_banner">
+     	<a href="#"><img src="G:\Shoppingsite\src\main\webapp\resources\images\bg22.jpg" alt="gb" title="Online Shopping SIte- Mr.online" border="0" /></a>     </div>
+     
+
     
    
  ${errorMessage} 

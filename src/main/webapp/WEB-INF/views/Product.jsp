@@ -26,10 +26,10 @@ th {
 </style>
 
 
-<%-- <link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="<c:url value="/resources/table1.css" />">
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"> --%>
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <title>New Product Details</title>
 </head>
 <style>
@@ -145,6 +145,8 @@ body  {
 			</thead>
 			<tbody>
 				<c:forEach items="${productList}" var="product">
+			
+                   <tr data-ng-repeat="product in products | orderBy:sortType:sortReverse | filter:search">
 					<tr id="tr1">
 						<td id="td1"><c:out value="${product.id}" />
 						<td id="td1"><c:out value="${product.name}" />
