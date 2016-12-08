@@ -153,7 +153,12 @@ img {
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
-  
+ <style>
+body  {
+   
+    background-color: #a5dada  ;
+}
+</style> 
      
 <style>
 
@@ -163,8 +168,8 @@ body {
 	line-height: 1.5em;
 	font-family: Verdana, Arial, san-serif;
 	font-size: 11px;
-	color: #fff;
-	background: #fff;
+	color: ;
+	background: ;
 }
 
 a:link, a:visited { color: #F1A5D5; text-decoration: underline; } 
@@ -174,7 +179,7 @@ h1 {
 	margin: 0px;
 	padding: 10px 0 20px 0;
 	font-size: 24px;
-	color: #ffffff;
+	color: ;
 	font-weight: normal;
 }
 
@@ -507,7 +512,7 @@ p {
     </div></nav>
  
      <div id="templatemo_banner">
-     	<a href="#"><img src="G:\Shoppingsite\src\main\webapp\resources\images\bg22.jpg" alt="gb" title="Online Shopping SIte- Mr.online" border="0" /></a>     </div>
+     	<a href="#"><img src="C:\Users\dell1\Mronline\Shoppingsite\src\main\webapp\resources\images\bg22.jpg" alt="gb" width="1204" height="336" title="Online Shopping SIte- Mr.online" border="0" /></a>     </div>
      
 
     
