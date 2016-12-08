@@ -680,12 +680,12 @@ ${registerMessage}
 			</c:import>
 		</c:when>
 		</c:choose>
-<c:choose>
+<%-- <c:choose>
 		<c:when test="${IfMakePaymentClicked}">
 			<c:import url="/WEB-INF/views/thanks.jsp">
 			</c:import>
 		</c:when>
-		</c:choose>
+		</c:choose> --%>
 </body>
 </html>
   
