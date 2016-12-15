@@ -73,7 +73,7 @@ width:100%;
   <div style="text-align:center;padding-top:40px;padding-bottom:40px">
   <h1> Thank You!!</h1>
   <h3>your payment has been received <span class="glyphicon glyphicon-ok"></span></h3>
-  <img src="G:\Shoppingsite\src\main\webapp\resources\images\tq.jpg.png" class="img-rounded" alt="tq" width="304" height="236"> 
+  <img src="C:\Users\dell1\Mronline\Shoppingsite\src\main\webapp\resources\images\tq.jpg.png" class="img-rounded" alt="tq" width="304" height="236"> 
   </div>
    
 </body>

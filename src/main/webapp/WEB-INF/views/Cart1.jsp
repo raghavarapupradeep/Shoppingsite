@@ -42,7 +42,7 @@ body {
   
   </div>
   
-     <nav class="navbar navbar-inverse">
+    <%--  <nav class="navbar navbar-inverse">
   <div class="container-fluid"> 
      <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px;">
        <!-- <li class="dropdown" > -->
@@ -55,6 +55,23 @@ body {
 						
 					</c:forEach>
         </ul>
+      </li> --%>
+      <nav class="navbar navbar-inverse">
+  <div class="container-fluid"> 
+    <%--  <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px;">
+       <li class="dropdown" >
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+        <li>
+          <c:forEach items="${categoryList}" var="obj">
+          
+				<a href="navproducts/${obj.id }"><c:out value="${obj.name}" /></a>
+							<br>
+						
+					</c:forEach>
+					</li>
+        </ul> --%>
       </li>
       
     
@@ -63,8 +80,8 @@ body {
       <li><a href="Registration">REGISTER</a></li>
       <li><a href="Login">LOGIN</a></li>
       </sec:authorize>
-	  <li><a href="ABOUTUS">ABOUT US</a></li>
-	  <li><a href="CONTACTUS">CONTACT US</a></li>
+	  <!-- <li><a href="ABOUTUS">ABOUT US</a></li>
+	  <li><a href="CONTACTUS">CONTACT US</a></li> -->
    <sec:authorize access="isAuthenticated()">
    <li ><a href="Cart1" ><p>CART <span class="glyphicon glyphicon-shopping-cart"></span></p></a></li>
 	<li><a href="<c:url value="/perform_logout" />"><p>LOGOUT<span class="glyphicon glyphicon-log-out"></span></p></a></li>
@@ -195,6 +212,7 @@ body {
 			</div>
 		</div>
 	</div>
+	
 	<!--  -->
 	
 </body>

@@ -153,7 +153,7 @@ tbody:hover tr:hover td {
 			<form action="perform_login" method="post">
 			<table>
 				<!--  <h3>New User Details</h3> -->
-				<h4>Existing User/Admin</h4>
+				<center><h4>Existing User/Admin</h4></center>
 				<tr>
 			    <td> Name</td>
   		         <div class="col-md-2">

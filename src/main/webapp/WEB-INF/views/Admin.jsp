@@ -63,7 +63,12 @@ ${msg1 }
 </c:choose>
 <c:choose>
 <c:when test="${UserClickedContactUs}">
-<c:import url="/WEB-INF/views/Home.jsp"></c:import>
+<c:import url="/WEB-INF/views/Login.jsp"></c:import>
+</c:when>
+</c:choose>
+<c:choose>
+<c:when test="${Clickedcatproduct}">
+<c:import url="/WEB-INF/views/catproducts.jsp"></c:import>
 </c:when>
 </c:choose>
 

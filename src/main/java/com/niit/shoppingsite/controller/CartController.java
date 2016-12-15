@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.shoppingsite.dao.CartDAO;
+import com.niit.shoppingsite.dao.CategoryDAO;
 import com.niit.shoppingsite.dao.ProductDAO;
 import com.niit.shoppingsite.model.Cart;
 import com.niit.shoppingsite.model.Product;
@@ -27,7 +28,8 @@ public class CartController {
 
 	@Autowired
 	 private CartDAO cartDAO;
-	 
+	@Autowired
+	 private CategoryDAO categoryDAO;
 	 @Autowired
 	 private ProductDAO productDAO;
 	 
@@ -38,6 +40,7 @@ public class CartController {
 	 {
 	  ModelAndView  mv=new ModelAndView("index");
 	  mv.addObject("UserClickedCart","true");
+	  mv.addObject("categoryList", categoryDAO.list());
 	  return mv;
 	  
 	 }
@@ -103,24 +106,7 @@ public class CartController {
 			return "redirect:/Cart1";
 		}
 	 
-	 /*
-	 @RequestMapping("Cart1")
-		public String viewCart(Model model, HttpSession session) {
-			int userId = (Integer) session.getAttribute("userId");
-			model.addAttribute("CartList", cartDAO.get(userId));
-			if (cartDAO.cartsize((Integer) session.getAttribute("userId")) != 0) {
-				model.addAttribute("CartPrice", cartDAO.CartPrice(userId));
-			} else {
-				model.addAttribute("EmptyCart", "true");
-			}
-			model.addAttribute("IfViewCartClicked", "true");
-			model.addAttribute("HideOthers", "true");
-			return "Cart1";
-		}
-	 
-	 */
-	 
-
+		 
 	 @RequestMapping(value="/Cart1")
 	 public ModelAndView cartpage(@ModelAttribute("cart") Cart cart,HttpSession session){
 	  ModelAndView mv= new ModelAndView("Cart1");
@@ -146,4 +132,11 @@ public class CartController {
 	  cartDAO.pay((Integer) session.getAttribute("userid"));
 	  return "index";
 	 }
+	 @RequestMapping(value="navproducts/{id}")
+	    public String navproduct(Model m,@PathVariable("id") int id ){
+
+	    	m.addAttribute("Clickedcatproduct", "true");
+	    	m.addAttribute("navproducts", productDAO.navproduct(id));
+	    	return "Cart1";
+	    }
 	}

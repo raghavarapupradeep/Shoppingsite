@@ -151,6 +151,11 @@ img {
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
  <style>
@@ -322,7 +327,7 @@ p {
 /* end of header panel */
 
 /* menu */
-#templatemo_menu_panel{
+/* #templatemo_menu_panel{
 	overflow: hidden;	
 	width: 880px;
 	height: 40px;
@@ -358,7 +363,7 @@ p {
 	color: #ffffff;
 }
 /* end of menu */
-
+ */
 /* content */
 #templatemo_content{
 	width: 1880px;
@@ -385,7 +390,7 @@ p {
 #templatemo_content #templatemo_content_right {
 	float: right;
 	width: 220px;
-}
+}nu
 
 .templatemo_right_section {
  	width: 210px;	
@@ -489,12 +494,26 @@ p {
       
       <li class="active"><a href="#">Home</a></li> </ul>   
   
-         <ul class="nav navbar-nav navbar-right">
+       <!--   <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px;"> -->
+       <li class="dropdown" >
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+        <li>
+          <c:forEach items="${categoryList}" var="obj">
+          
+				<a href="navproduct/${obj.id }"><c:out value="${obj.name}" /></a>
+							<br>
+						
+					</c:forEach>
+					</li>
+        </ul>
       <sec:authorize access="!isAuthenticated()">
-      
+       <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px;">
       <li><a href="Registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li></ul>
       </sec:authorize>
+  </div>
   </div>
 
           <%--  <sec:authorize access="!isAuthenticated()">
@@ -512,7 +531,7 @@ p {
     </div></nav>
  
      <div id="templatemo_banner">
-     	<a href="#"><img src="C:\Users\dell1\Mronline\Shoppingsite\src\main\webapp\resources\images\bg22.jpg" alt="gb" width="1204" height="336" title="Online Shopping SIte- Mr.online" border="0" /></a>     </div>
+     	<a href="#"><img src="C:\Users\dell1\Mronline\Shoppingsite\src\main\webapp\resources\images\bg22.jpg" alt="bg22" width="1204" height="336" title="Online Shopping SIte- Mr.online" border="0" /></a>     </div>
      
 
     
@@ -533,10 +552,12 @@ ${registerMessage}
 <jsp:include page="Registration.jsp"></jsp:include></c:if> 
 <c:if test="${UserClickedadmin}">
 <jsp:include page="Admin.jsp"></jsp:include></c:if> 
-<c:if test="${UserClickedCart}">
-<jsp:include page="Cart1.jsp"></jsp:include></c:if>   
+<%-- <c:if test="${UserClickedCart}">
+<jsp:include page="Cart1.jsp"></jsp:include></c:if>    --%>
 <c:if test="${UserClickedshowproduct}">
 <jsp:include page="ShowProduct.jsp"></jsp:include></c:if> 
+<c:if test="${Clickedcatproduct}">
+<jsp:include page="catproducts.jsp"></jsp:include></c:if> 
 <div>  
 
   <style>
@@ -642,7 +663,7 @@ ${registerMessage}
 							</c:choose>
 							 --%>
     <c:choose>
-		<c:when test="${clickedshowproduct}">
+		<c:when test="${UserClickedshowproduct}">
 			<c:import url="/WEB-INF/views/ShowProduct.jsp"></c:import>
 		</c:when>
 	</c:choose>
@@ -680,6 +701,12 @@ ${registerMessage}
 			</c:import>
 		</c:when>
 		</c:choose>
+		<c:choose>
+<c:when test="${Clickedcatproduct}">
+<c:import url="/WEB-INF/views/catproducts.jsp"></c:import>
+</c:when>
+</c:choose>
+		
 <%-- <c:choose>
 		<c:when test="${IfMakePaymentClicked}">
 			<c:import url="/WEB-INF/views/thanks.jsp">
