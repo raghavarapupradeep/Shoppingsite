@@ -93,13 +93,15 @@ body {
     </div>
        
  <nav class="navbar navbar-inverse">
-  <div class="container">
-    <div class="navbar-header"> 
+  <div class="container-fluid">
+    <div class="navbar-header">
+      
+  
        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li> </ul>   
+            <!-- <li class="active"><a href="#">Home</a></li> </ul>    -->
              <!--   <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px;"> -->
              <li class="dropdown" >
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories
               <span class="caret"></span></a>
                     <ul class="dropdown-menu">
         <li>
@@ -111,17 +113,17 @@ body {
 					</c:forEach>
 					</li>
         </ul>
-        </div>
+        </div> 
       
-              <div class="container">
-              <ul class="nav nav-pill navbar-right">
+       
+           <ul class="nav navbar-nav navbar-right">
            <sec:authorize access="!isAuthenticated()">
     
 			      <li><a href="Registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 			      <li><a href="Login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 			      </sec:authorize>
              </ul>
-             </div>
+           
       <sec:authorize access="isAuthenticated()">
       
      <ul class="nav navbar-nav navbar-right">
