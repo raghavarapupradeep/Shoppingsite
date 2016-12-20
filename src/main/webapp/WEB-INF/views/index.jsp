@@ -320,6 +320,84 @@ ${registerMessage}
 			</c:import>
 		</c:when>
 		</c:choose> --%>
+		<div>
+		<c:choose>
+			<c:when test="${!Administrator}">
+				<c:if test="${empty HideOthers}">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>OUR COMPANY</th>
+								<th>TOP CATEGORIES</th>
+								<th>POLICIES AND INFO</th>
+							</tr>
+						</thead>
+						<tbody>
+
+							<tr>
+
+								<td>About us<br> Mr.Online<br> Ethnico<br>
+									Place of Origin<br> Blog<br>
+								</td>
+
+								<td>Watches<br> Dresses<br> Mobiles<br>
+									Accessories<br> Salwar Suits<br></td>
+								<td>Terms & Conditions<br> Policy for Sellers<br>
+									Policy for Buyers<br> Shipping & Refund Policies<br>
+									Wholesale Policy<br> Privacy Policy<br></td>
+							</tr>
+
+							<tr>
+								<th>SUPPORT</th>
+								<th>PAYMENT OPTIONS</th>
+								<th>STAY CONNECTED</th>
+							</tr>
+
+
+							<tr>
+								<td><i class="fa fa-envelope"
+									style="font-size: 30px; color: blue"></i> <a
+									href="mailto:support@company.com">support@Mronline.com</a><br>
+									<i class="fa fa-phone" style="font-size: 30px; color: blue"><p>+91-9701239703</p></i><br> <i class="fa fa-map-marker"
+									style="font-size: 30px; color: blue"></i>
+									<!-- <p>
+										<span>24/4-859 V V Nagar,VIJAYAWADA, </span> Andhra Pradesh,
+										INDIA
+									</p> -->
+									<br></td>
+								<td><div class="footer-icons">
+										<a href=""><i class="fa fa-facebook-official"
+											style="font-size: 30px; color: blue"></i> <a href=""><i
+												class="fa fa-twitter"
+												style="font-size: 30px; color: #00ffff"></i></a> <a href=""><i
+												class="fa fa-linkedin-square"
+												style="font-size: 30px; color: blue"></i></a> <a href=""><i
+												class="fa fa-google" style="font-size: 30px; color: #3366ff"></i></a>
+											<a href=""><i class="fa fa-google-plus-official"
+												style="font-size: 30px; color: red"></i></a> <a href=""><i
+												class="fa fa-whatsapp"
+												style="font-size: 30px; color: #33ff00"></i></a>
+									</div></td>
+								<td><a href=""><i class="fa fa-paypal"
+										aria-hidden="true" style="font-size: 30px; color: #0066ff"></i>
+								</a> . <a href=""><i class="fa fa-cc-amex" aria-hidden="true"
+										style="font-size: 30px; color: #0066ff"></i> </a> . <a href=""><i
+										class="fa fa-cc-mastercard" aria-hidden="true"
+										style="font-size: 30px; color: #0066ff"></i> </a> . <a href=""><i
+										class="fa fa-cc-visa" aria-hidden="true"
+										style="font-size: 30px; color: #0066ff"></i> </a> . <a href=""><i
+										class="fa fa-credit-card" aria-hidden="true"
+										style="font-size: 30px; color: #0066ff"></i> </a> . <a href=""><i
+										class="fa fa-google-wallet" aria-hidden="true"
+										style="font-size: 30px; color: #0066ff"></i> </a> . <a href=""><i
+										class="fa fa-cc-stripe" aria-hidden="true"
+										style="font-size: 30px; color: #0066ff"></i> </a></td>
+						</tbody>
+					</table>
+				</c:if>
+			</c:when>
+		</c:choose>
+	</div>
 </body>
 </html>
   
