@@ -1,26 +1,26 @@
 # Mr.Online (Online Shopping Site)
 This Ecommerce project is the Frontend which is built using Bootstrap, AngularJS and JQuery consisting of basic funtionality like
 
- New user registrations
- Different views for user and admin
- View individual category items
- View individual item
- Add to cart
- View cart
- Add category, supplier and products (Only admin)
+- New user registrations
+ -Different views for user and admin
+ -View individual category items
+ -View individual item
+ -Add to cart
+ -View cart
+ -Add category, supplier and products (Only admin)
 
 #Installation Guide
 
-Download Eclipse
-Install Tomcat
-Set Tomcat path Reference
-Download Project here
-Import Project in Eclipse
-File
-Import
-Existing projects into workspace
-Finish
-After importing right click on project and click run on apache tomcat server
+-Download Eclipse
+-Install Tomcat
+-Set Tomcat path Reference
+-Download Project here
+-Import Project in Eclipse
+-File
+-Import
+-Existing projects into workspace
+-Finish
+-After importing right click on project and click run on apache tomcat server
 #Softwares used
 
 Eclipse Marse2 Eclipse is an integrated development environment (IDE) used in computer programming, and is the most widely used Java IDE.It contains a base workspace and an extensible plug-in system for customizing the environment. Eclipse is written mostly in Java and its primary use is for developing Java applications. Click here to download Eclipse Marse 2.
@@ -33,9 +33,9 @@ Tomcat 9.0 Apache Tomcat is an open-source web server and servlet container deve
 
 Bootstrap v3.3.7 Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites. Click here to downlaod Bootstrap 3.3.7
 
-bootstrap.min.css
-bootstrap-theme.css
-bootstrap.min.js
+-bootstrap.min.css
+-bootstrap-theme.css
+-bootstrap.min.js
 W3CSS v2.82 W3.CSS is a modern CSS framework with built-in responsiveness: Smaller and faster than other CSS frameworks.Uses standard CSS only (No jQuery or JavaScript library). Speeds up and simplifies web development. Supports modern responsive design (mobile first) by default.
 Font Awesome Icons v4.6.3 Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS. Click here to downlaod Font Awesome Icons v4.6.3
 
