@@ -2,11 +2,17 @@
 This Ecommerce project is the Frontend which is built using Bootstrap, AngularJS and JQuery consisting of basic funtionality like
 
 - New user registrations
+
  -Different views for user and admin
+ 
  -View individual category items
+ 
  -View individual item
+ 
  -Add to cart
+ 
  -View cart
+ 
  -Add category, supplier and products (Only admin)
 
 #Installation Guide
