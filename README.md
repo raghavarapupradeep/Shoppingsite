@@ -1,4 +1,4 @@
-# Shoppingsite
+# Mr.Online (Online Shopping Site)
 This Ecommerce project is the Frontend which is built using Bootstrap, AngularJS and JQuery consisting of basic funtionality like
 
 New user registrations
@@ -9,7 +9,7 @@ Add to cart
 View cart
 Add category, supplier and products (Only admin)
 
-Installation Guide
+#Installation Guide
 
 Download Eclipse
 Install Tomcat
