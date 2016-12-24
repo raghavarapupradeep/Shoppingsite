@@ -3,40 +3,40 @@
 This Ecommerce project is the Frontend which is built using Bootstrap, AngularJS and JQuery consisting of basic funtionality like
 
 
--New user registrations
+- New user registrations
 
--Different views for user and admin
+- Different views for user and admin
 
--View individual category items
+- View individual category items
 
--View individual item
+- View individual item
 
--Add to cart
+- Add to cart
 
--View cart
+- View cart
 
--Add category, supplier and products (Only admin)
+- Add category, supplier and products (Only admin)
 
 #Installation Guide
 
 
--Download Eclipse
+- Download Eclipse
 
--Install Tomcat
+- Install Tomcat
 
--Set Tomcat path Reference
+- Set Tomcat path Reference
 
--Download Project here
+- Download Project here
 
--Import Project in Eclipse
+- Import Project in Eclipse
 
--File
+         - File
 
--Import
+         - Import
 
--Existing projects into workspace
+         - Existing projects into workspace
 
--Finish
+         - Finish
 
 -After importing right click on project and click run on apache tomcat server
 
@@ -52,9 +52,9 @@ Tomcat 9.0 Apache Tomcat is an open-source web server and servlet container deve
 
 Bootstrap v3.3.7 Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites. Click here to downlaod Bootstrap 3.3.7
 
--bootstrap.min.css
--bootstrap-theme.css
--bootstrap.min.js
+                - bootstrap.min.css
+                - bootstrap-theme.css
+                - bootstrap.min.js
 W3CSS v2.82 W3.CSS is a modern CSS framework with built-in responsiveness: Smaller and faster than other CSS frameworks.Uses standard CSS only (No jQuery or JavaScript library). Speeds up and simplifies web development. Supports modern responsive design (mobile first) by default.
 Font Awesome Icons v4.6.3 Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS. Click here to downlaod Font Awesome Icons v4.6.3
 
