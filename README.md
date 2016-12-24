@@ -1,27 +1,45 @@
 # Mr.Online (Online Shopping Site)
+
 This Ecommerce project is the Frontend which is built using Bootstrap, AngularJS and JQuery consisting of basic funtionality like
 
 
 -New user registrations
+
 -Different views for user and admin
+
 -View individual category items
+
 -View individual item
+
 -Add to cart
+
 -View cart
+
 -Add category, supplier and products (Only admin)
 
 #Installation Guide
 
+
 -Download Eclipse
+
 -Install Tomcat
+
 -Set Tomcat path Reference
+
 -Download Project here
+
 -Import Project in Eclipse
+
 -File
+
 -Import
+
 -Existing projects into workspace
+
 -Finish
+
 -After importing right click on project and click run on apache tomcat server
+
 #Softwares used
 
 Eclipse Marse2 Eclipse is an integrated development environment (IDE) used in computer programming, and is the most widely used Java IDE.It contains a base workspace and an extensible plug-in system for customizing the environment. Eclipse is written mostly in Java and its primary use is for developing Java applications. Click here to download Eclipse Marse 2.
